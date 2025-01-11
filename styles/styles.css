@@ -1,0 +1,20 @@
+:root {
+    --primary-color: #C94B34;
+    --secondary-color: #7E806A;
+    --primary-text-color: #172121;
+    --primary-background-color: #F2E8CF;
+}
+
+html {
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+    font-family: 'Alatsi', serif, sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: normal;
+}
+
+.logo {
+    max-width: 100vw;
+    max-height: 100vh;
+}
