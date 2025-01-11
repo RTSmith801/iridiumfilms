@@ -5,12 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles/reset.css" rel="stylesheet">
+    <link href="styles/layout.css" rel="stylesheet">
     <link href="styles/styles.css" rel="stylesheet">
     <title>Iridium Films</title>
 </head>
 
 <body>
-    <img src="images/iridium_films_logo_large.png" class="logo">
+    <header><img src="images/iridium_films_logo_cropped.png" class="logo"></header>
+    <main>
+        <div class="video-container">
+            <video controls width="640" height="360">
+                <source src="images/alixandra_jade/alixandra_jade.mov" type="video/quicktime">
+            </video>
+        </div>
+
+        <div class="photo-grid">
+            <img class="card card-tall card-wide" src="images/alixandra_jade/aj1.jpg" alt="" loading="lazy">
+            <img class="card card-tall" src="images/alixandra_jade/aj2.jpg" alt="" loading="lazy">
+            <img class="card" src="images/alixandra_jade/aj3.jpg" alt="" loading="lazy">
+            <img class="card" src="images/alixandra_jade/aj4.jpg" alt="" loading="lazy">
+            <img class="card" src="images/alixandra_jade/aj5.jpg" alt="" loading="lazy">
+            <img class="card" src="images/alixandra_jade/aj6.jpg" alt="" loading="lazy">
+            <img class="card card-wide" src="images/alixandra_jade/aj7.jpg" alt="" loading="lazy">
+        </div>
+    </main>
 </body>
 
 </html>
