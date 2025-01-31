@@ -1,0 +1,268 @@
+:root {
+    --color01: #f3ecd9;
+    --color02: #ff0b28;
+    --color03: #7e806a;
+    --color04: #172121;
+    --color05: #fefffa;
+}
+
+html {
+    background-color: var(--color01);
+    color: var(--color04);
+    font-family: "Impact", serif, sans-serif;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: normal;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+body {
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    overflow-y: auto;
+}
+
+/* header styles  */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 1px var(--color02) solid;
+    color: var(--color02);
+    min-height: 200px;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.logo {
+    display: block;
+    width: auto;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo_no_border {
+    display: none;
+}
+
+.company_name {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 6rem;
+    line-height: 5.5rem;
+}
+
+nav {
+    height: auto;
+    /* logo width is 116px */
+    width: 116px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    padding-right: 5px;
+}
+
+#menu-icon {
+    width: 40px;
+}
+
+#menu-icon:hover {
+    cursor: pointer;
+}
+
+/* Moible Menu */
+
+#mobile-menu {
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    color: black;
+    transition: height 0.3s ease-in-out, margin 0.3s ease-in-out;
+}
+
+#mobile-menu.active {
+    height: fit-content;
+    max-height: none;
+    margin-top: 1rem;
+    padding: 0;
+    border-bottom: 1px var(--color02) solid;
+}
+
+#mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+}
+
+#mobile-menu a {
+    color: var(--color04);
+    font-size: 2rem;
+    line-height: 2rem;
+    text-decoration: none;
+}
+
+#mobile-menu a:hover {
+    color: var(--color02);
+}
+
+#mobile-menu a:active {
+    color: var(--color02);
+}
+
+/* Main Content Styles */
+
+main {
+    background-color: var(--color01);
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    margin: 0 auto;
+}
+
+.portfolio_pic > img {
+    width: 100%;
+    height: auto;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.photo-gallery > .photo-container {
+    max-height: calc(100vh / 2.39);
+    overflow: hidden;
+    position: relative;
+    background: black;
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+}
+
+.photo-gallery > .photo-container:hover {
+    opacity: 0.5;
+}
+
+.photo-gallery > .photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    border-top: 1px var(--color02) solid;
+    padding: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Contact Form Styles */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 1rem;
+    gap: 1rem;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#contactForm {
+    background: var(--color03);
+    padding: 20px;
+    border-radius: 0px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 1px solid var(--color04);
+    box-sizing: border-box;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: normal;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: var(--color04);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 97%;
+    padding: 10px;
+    border: 1px solid var(--color04);
+    border-radius: 0px;
+    font-size: 1rem;
+    background-color: var(--color01);
+    color: var(--color04);
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    background-color: var(--color05);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 15px;
+    font-family: inherit;
+}
+
+/* width 833 */
+
+@media (max-width: 834px) {
+    .photo-gallery {
+        grid-template-columns: auto;
+    }
+}
+
+@media (max-width: 532px) {
+    header {
+        flex-direction: column-reverse;
+        min-height: 315px;
+        gap: 0;
+    }
+    .company_name {
+        display: none;
+    }
+    nav {
+        justify-content: center;
+        padding: 0;
+        margin-top: 1rem;
+    }
+    .logo {
+        max-width: 200px;
+        height: auto;
+        display: none;
+    }
+    .logo_no_border {
+        max-width: 200px;
+        height: auto;
+        display: block;
+    }
+}
