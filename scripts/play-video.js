@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const photoContainers = document.querySelectorAll(".photo-container img");
     const videoContainer = document.getElementById("video-display");
+    const videoTextContainer = document.getElementById("video-text-display");
 
     function smoothScrollTo(targetY, duration) {
         const startY = window.scrollY;
@@ -29,6 +30,8 @@ document.addEventListener("DOMContentLoaded", function() {
         photo.addEventListener("click", function() {
             const videoId = this.getAttribute("data-video-id");
 
+            const videoText = this.getAttribute("video-text")
+
             // Remove existing video
             videoContainer.innerHTML = "";
 
@@ -42,6 +45,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
             videoContainer.appendChild(iframe);
             videoContainer.style.display = "block";
+
+            // Adds custom text when added as 'video-text' in the photo container element
+            videoTextContainer.innerHTML = videoText;
+
+
+
 
             // Custom smooth scroll to video
             const targetPosition = videoContainer.getBoundingClientRect().top + window.scrollY - 20; // Offset for better alignment
