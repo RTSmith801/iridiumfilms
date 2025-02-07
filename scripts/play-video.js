@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const photoContainers = document.querySelectorAll(".photo-container img");
+    const photoContainers = document.querySelectorAll(".photo-container");
     const videoContainer = document.getElementById("video-display");
     const videoTextContainer = document.getElementById("video-text-display");
 
@@ -28,9 +28,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     photoContainers.forEach(photo => {
         photo.addEventListener("click", function() {
-            const videoId = this.getAttribute("data-video-id");
+            const img = this.querySelector("img"); // retreive nested img element
+            const videoId = img.getAttribute("data-video-id");
 
-            const videoText = this.getAttribute("video-text")
+            const videoText = img.getAttribute("video-text")
 
             // Remove existing video
             videoContainer.innerHTML = "";
