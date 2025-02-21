@@ -42,7 +42,7 @@ header {
     min-height: 200px;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
-    gap: 1rem;
+    gap: 0;
 }
 
 nav {
