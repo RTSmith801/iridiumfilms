@@ -56,8 +56,8 @@ nav {
 #menu-icon {
     margin-top: 0.75rem;
     width: 100%;
-    font-size: 1.75rem;
-    line-height: 1.75rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
     text-align: center;
     border-bottom: 1px var(--color02) solid;
     padding-bottom: 1rem;
@@ -113,8 +113,8 @@ nav {
 #mobile-menu a {
     width: 100%;
     color: var(--color04);
-    font-size: 1.75rem;
-    line-height: 1.75rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
     text-decoration: none;
     text-transform: uppercase;
 }
