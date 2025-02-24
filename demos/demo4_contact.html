@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/reset.css" rel="stylesheet">
+    <link href="styles/layout.css" rel="stylesheet">
+    <link href="styles/demo4_styles.css" rel="stylesheet">
+    <link href="styles/lightbox.css" rel="stylesheet" />
+    <title>Iridium Films TEST WEBSITE</title>
+</head>
+
+<body>
+    <div id="mobile-menu">
+        <ul>
+            <li>
+                <a href="demo4.html">Home</a>
+            </li>
+            <li>
+                <a href="demo4_films.html">Films</a>
+            </li>
+            <li>
+                <a href="demo4_stills.html">Stills</a>
+            </li>
+            <li>
+                <a href="#" class="active">Contact</a>
+            </li>
+        </ul>
+    </div>
+    <header class="clearfix">
+        <nav>
+            <p id="menu-icon">Menu</p>
+        </nav>
+        <div><img src="images/logos/logo_camera_only.png" class="logo"></div>
+        <div class="company_name">
+            <h1>IRIDIUM FILMS</h1>
+        </div>
+    </header>
+    <main>
+        <div class="photo-gallery">
+
+            <div class="about">
+                <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum reprehenderit, odio temporibus
+                        ipsa maiores, quam repellat laudantium facilis expedita repellendus debitis. Excepturi labore
+                        nemo esse vitae voluptate eaque reiciendis blanditiis.</span><span>Iste consectetur nulla
+                        asperiores nesciunt aliquam? Placeat obcaecati tempora animi, sunt tempore, rerum debitis
+                        facilis impedit eveniet doloribus dolorem, similique assumenda eaque alias laboriosam nam quod
+                        quibusdam voluptatum eum voluptas.</span><span>Ipsa cumque ab debitis quas repudiandae obcaecati
+                        perferendis culpa consequuntur, quis illo id, pariatur expedita architecto totam eaque suscipit.
+                        Voluptatum obcaecati sequi est laboriosam dolorum, autem id eaque dignissimos deserunt.</span>
+                </p>
+            </div>
+            <div class="portfolio_pic">
+                <img src="images/portfolio_pic_small.jpg" alt="Iridium Films Owner">
+            </div>
+
+        </div>
+        <div class="container" method="POST" action="">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required
+                        placeholder="I would like to discuss an upcoming project with you."></textarea>
+                </div>
+                <!-- <div class="g-recaptcha" data-sitekey="6LdtT6oqAAAAADvVz8DBrgwaxRVQvll9tCTr9Dnk" data-theme="dark"
+                    data-size="normal"></div> -->
+                <div id="form-response" style="margin-top: 10px; color: #f00;"></div>
+                <div class="form-group">
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <!-- &#169; 2025 Iridium Films -->
+        <div class="social-links">
+            <a href="https://vimeo.com/user185481730" target="_blank"><img src="./images/icons/vimeo_icon.png"
+                    alt=""></a>
+            <a href="https://www.youtube.com/@Paintfilm" target="_blank"><img src="./images/icons/instagram_icon.png"
+                    alt=""></a>
+            <a href="https://www.instagram.com/jeovanni.xoumphonphackdy/" target="_blank"><img
+                    src="./images/icons/youtube_icon.png" alt=""></a>
+        </div>
+    </footer>
+    <script src="scripts/mobile-menu.js"></script>
+    <script src="scripts/lightbox-plus-jquery.js"></script>
+</body>
+
+</html>
