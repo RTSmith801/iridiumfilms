@@ -1,0 +1,27 @@
+@use "variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-body;
+  background: $dark;
+  color: $primary;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: $font-heading;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

@@ -2,71 +2,228 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles/reset.css" rel="stylesheet">
-    <link href="styles/layout.css" rel="stylesheet">
-    <link href="styles/styles.css" rel="stylesheet">
-    <link href="styles/lightbox.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iridium Films</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet" />
 </head>
 
 <body>
-    <div id="mobile-menu">
-        <ul>
-            <li>
-                <a href="#" class="active">Home</a>
-            </li>
-            <li>
-                <a href="projects.html">Projects</a>
-            </li>
-            <li>
-                <a href="process.html">Process</a>
-            </li>
-            <li>
-                <a href="contact.html">Contact</a>
-            </li>
-        </ul>
-    </div>
-    <header class="clearfix">
-        <nav>
-            <p id="menu-icon">Menu</p>
-        </nav>
-        <div>
-            <a href="index.html"><img src=" images/logos/logo_camera_only.png " class=" logo "></a>
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="logo"><a href="#">IRIDIUM FILMS</a></div>
+        <div class="nav-links">
+            <a href="#work">Work</a>
+            <a href="#services">Capabilities</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
         </div>
-        <div class=" company_name ">
-            <h1>IRIDIUM FILMS</h1>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="/video/showreel.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+            <h1>Cinema With Purpose.</h1>
+            <p>
+                Honest Stories, Cinematically Told.
+            </p>
+            <a href="#work" class="btn">Explore Work</a>
         </div>
     </header>
-    <main>
-        <div class="pageText center">
-            <h2>Commercial and Documentary Filmmaking</h2>
+
+    <!-- WORK GRID -->
+    <section id="work" class="section reveal">
+        <div class="container">
+            <h2>Featured Work</h2>
+            <div class="grid work-grid">
+                <!-- Add your project cards -->
+                <div class="card">
+                    <img src="/images/alixandra_jade/aj5_small.jpg" alt="Project" />
+                    <div class="card-overlay">
+                        <h3>Alixandra Jade</h3>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/hc/hc04_small.jpg" alt="Project" />
+                    <div class="card-overlay">
+                        <h3>Honest Cuts</h3>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/pho_king/pho_king01_small.jpg" alt="Project" />
+                    <div class="card-overlay">
+                        <h3>The Pho King</h3>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/p4l/p4l06_small.jpg" alt="Project" />
+                    <div class="card-overlay">
+                        <h3>Phase4Life</h3>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/x/x03_small.jpg" alt="Project" />
+                    <div class="card-overlay">
+                        <h3>Pura Vida</h3>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/x/x07_small.jpg" alt="Project" />
+                    <div class="card-overlay">
+                        <h3>...</h3>
+                    </div>
+                </div>
+                <!-- more cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CAPABILITIES / SERVICES -->
+    <section id="services" class="section reveal dark">
+        <div class="container narrow">
+            <h2>Capabilities</h2>
+            <p>
+                From concept to delivery — we handle creative,
+                production, editing, motion, and post-production.
+            </p>
+
+            <div class="grid services-grid">
+                <div class="service">
+                    <h4>Creative Strategy</h4>
+                </div>
+                <div class="service">
+                    <h4>Production</h4>
+                </div>
+                <div class="service">
+                    <h4>Post-Production</h4>
+                </div>
+                <div class="service">
+                    <h4>Motion & Design</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section reveal">
+        <div class="container narrow">
+            <h2>About</h2>
+            <p>
+                At IRIDIUM FILMS, we are an all-encompassing film production company based in Salt Lake City, Utah. From
+                commercials to documentaries, we specialize in bringing a wide range of projects to life. Our goal is
+                simple: to produce visually striking films that create lasting impressions.
+            </p>
+        </div>
+    </section>
+
+    <!-- CLIENTS -->
+    <section class="section reveal dark">
+        <div class="container narrow">
+            <h2>Clients We’ve Worked With</h2>
+            <div class="clients-grid">
+                <!-- add client logos -->
+                <span>...</span>
+                <span>...</span>
+                <span>...</span>
+                <span>...</span>
+                <span>...</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section reveal contact-section">
+        <div class="container narrow">
+            <h2>Let’s Create Something Meaningful</h2>
+            <p class="contact-intro">
+                Tell us about your project and we’ll get back to you within 24 hours.
+            </p>
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Your Name" required />
+                </div>
+
+                <div class="form-row">
+                    <input type="email" name="email" placeholder="Email Address" required />
+                </div>
+
+                <div class="form-row">
+                    <input type="text" name="company" placeholder="Company (Optional)" />
+                </div>
+
+                <div class="form-row">
+                    <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+
+            <p class="form-status" id="formStatus"></p>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-inner">
+
+            <!-- Brand -->
+            <div class="footer-brand">
+                <h3>IRIDIUM FILMS</h3>
+                <p>
+                    Commercial & Documentary Filmmaking<br />
+                    Based in Salt Lake City, Utah
+                </p>
+            </div>
+
+            <!-- Navigation -->
+            <div class="footer-links">
+                <h4>Navigate</h4>
+                <a href="#work">Work</a>
+                <a href="#services">Capabilities</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <a href="mailto:info@iridiumfilms.com">
+                    info@iridiumfilms.com
+                </a>
+                <p>Salt Lake City, UT</p>
+            </div>
+
+            <!-- Social -->
+            <div class="footer-social">
+                <h4>Social</h4>
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">Vimeo</a>
+                <a href="#" target="_blank">LinkedIn</a>
+            </div>
+
         </div>
 
-        <div class=" video-container ">
-            <iframe src=" https://player.vimeo.com/video/1051687702?autoplay=1&muted=1 " frameborder=" 0 "
-                allow=" autoplay; fullscreen; picture-in-picture " allowfullscreen>
-            </iframe>
-        </div>
-
-    </main>
-
-    <footer>
-        <!-- &#169; 2025 Iridium Films -->
-        <div class="social-links">
-            <a href="https://vimeo.com/user185481730" target="_blank"><img src="./images/icons/vimeo_icon.png"
-                    alt="" /></a>
-            <a href="https://www.instagram.com/jeovanni.xoumphonphackdy/" target="_blank"><img
-                    src="./images/icons/instagram_icon.png" alt="" /></a>
-            <a href="https://www.youtube.com/@Paintfilm" target="_blank"><img src="./images/icons/youtube_icon.png"
-                    alt="" /></a>
+        <div class="footer-bottom">
+            <p>© 2026 Iridium Films. All rights reserved.</p>
         </div>
     </footer>
-    <script src=" scripts/mobile-menu.js "></script>
-    <script src=" scripts/lightbox-plus-jquery.js "></script>
-    <script src=" https://player.vimeo.com/api/player.js "></script>
 
+    <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>
