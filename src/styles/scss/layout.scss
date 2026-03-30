@@ -10,14 +10,14 @@
   justify-content: space-between;
   z-index: 100;
   background: transparent;
-  
+
   a {
     text-decoration: none;
     padding: 0.5rem;
     color: white;
     font-weight: 200;
     text-transform: uppercase;
-    
+
     &:hover,
     &:focus {
       color: grey;
@@ -103,13 +103,25 @@
 /* WORK GRID */
 .grid {
   display: grid;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .work-grid {
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  a:first-child {
+    grid-column: span 2;
+  }
+
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 3rem;
   gap: 2.5rem;
+
+  @media (max-width: 768px) {
+    a:first-child {
+      grid-column: span 1;
+    }
+    grid-template-columns: 1fr;
+  }
 }
 
 /* VIDEO CARD */
@@ -131,21 +143,31 @@
   }
 
   .card-image {
-    opacity: 1;
+    opacity: 0;
     z-index: 1;
   }
 
   .card-video {
-    opacity: 0;
+    opacity: 1;
     z-index: 2;
   }
 
-  &:hover .card-video {
-    opacity: 1;
-  }
+  // &:hover .card-video {
+  //   opacity: 0;
+  // }
 
-  &:hover .card-image {
-    opacity: 0;
+  // &:hover .card-image {
+  //   opacity: 1;
+  // }
+
+  .card-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
   }
 
   .card-overlay h3 {
@@ -154,14 +176,14 @@
     font-weight: 600;
     color: white;
     letter-spacing: 0.5px;
-    opacity: 0.85;
+    opacity: 0;
     transform: translateY(12px);
     transition: all 0.4s ease;
   }
 
   &:hover .card-overlay h3 {
     transform: translateY(0);
-    opacity: 1;
+    opacity: .8;
   }
 }
 
