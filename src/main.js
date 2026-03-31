@@ -63,28 +63,28 @@ videoCards.forEach((card) => {
    HERO VIDEO SELECTION
 ========================= */
 
-const heroVideo = document.getElementById("heroVideo");
+// const heroVideo = document.getElementById("heroVideo");
 
-const desktopSrc = "/video/showreel.mp4";
-const mobileSrc = "/video/showreel_vert.mp4";
+// const desktopSrc = "/video/showreel.mp4";
+// const mobileSrc = "/video/showreel_vert.mp4";
 
-function setHeroVideo() {
-  const isMobile = window.innerWidth <= 768;
-  const newSrc = isMobile ? mobileSrc : desktopSrc;
+// function setHeroVideo() {
+//   const isMobile = window.innerWidth <= 768;
+//   const newSrc = isMobile ? mobileSrc : desktopSrc;
 
-  // Only update if different (prevents reload loops)
-  if (heroVideo.getAttribute("src") !== newSrc) {
-    heroVideo.src = newSrc;
-    heroVideo.load();
+//   // Only update if different (prevents reload loops)
+//   if (heroVideo.getAttribute("src") !== newSrc) {
+//     heroVideo.src = newSrc;
+//     heroVideo.load();
 
-    heroVideo.play().catch(() => {
-      // autoplay may fail silently
-    });
-  }
-}
+//     heroVideo.play().catch(() => {
+//       // autoplay may fail silently
+//     });
+//   }
+// }
 
-// Run on load
-setHeroVideo();
+// // Run on load
+// setHeroVideo();
 
-// Run on resize
-window.addEventListener("resize", setHeroVideo);
+// // Run on resize
+// window.addEventListener("resize", setHeroVideo);
