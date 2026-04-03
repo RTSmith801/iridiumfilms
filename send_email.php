@@ -10,11 +10,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($responseKeys["success"]) {
         $name = htmlspecialchars($_POST['name']);
         $email = htmlspecialchars($_POST['email']);
+        $company = htmlspecialchars($_POST['company']); 
         $message = htmlspecialchars($_POST['message']);
 
         $to = "RTSmith801@gmail.com, jxoum9@gmail.com";
         $subject = "New Message from $name";
-        $body = "This email was generated from the contact form at IridiumFilms.com. \n\nContact Name: $name\nContact Email: $email\n\nMessage:\n$message";
+
+        // Include company if provided
+        $body = "This email was generated from the contact form at IridiumFilms.com.\n\n";
+        $body .= "Contact Name: $name\n";
+        $body .= "Contact Email: $email\n";
+        if (!empty($company)) {
+            $body .= "Company: $company\n";
+        }
+        $body .= "\nMessage:\n$message";
+
         $headers = "From: IridiumFilms.com";
 
         if (mail($to, $subject, $body, $headers)) {

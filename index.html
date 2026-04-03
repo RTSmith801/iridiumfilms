@@ -17,7 +17,7 @@
     <nav class="nav">
         <div class="logo"><a href="#">IRIDIUM FILMS</a></div>
         <div class="nav-links">
-            <a href="#work">Work</a>
+            <a href="/projects/">Work</a>
             <a href="#services">Process</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
@@ -44,7 +44,7 @@
             <h2>Featured Work</h2>
             <div class="grid work-grid">
 
-                <a href="https://vimeo.com/1070018607" target="_blank" class="card video-card">
+                <a href="/projects/listen-your-way.html" class="card video-card">
                     <img src="/images/still_listen.jpg" alt="Listen Your Way" class="card-image" />
                     <video class="card-video" muted loop playsinline preload="metadata">
                         <source src="/video/thumbnail_listen.mp4" type="video/mp4" />
@@ -95,6 +95,9 @@
                 </a>
 
             </div>
+            <div class="work-cta">
+                <a href="/projects/" class="btn-outline">View More Projects</a>
+            </div>
         </div>
     </section>
 
@@ -118,7 +121,7 @@
                 </div>
                 <div class="service">
                     <h4>PRODUCTION</h4>
-                    <p>Lights. Camera. Action. With a solid pre-production plan in hand, we bring the vision to life. On
+                    <p>The fun part. With a solid pre-production plan in hand, we bring the vision to life. On
                         set, we focus on execution with professionalism, positivity, and precision. No egos. No drama.
                         Just top-tier talent, high-quality equipment, and a team that delivers results.</p>
                 </div>
@@ -164,19 +167,33 @@
             <h2>Let’s Create Something Meaningful</h2>
             <p class="contact-intro">Tell us about your project.</p>
 
-            <form class="contact-form" id="contactForm">
-                <div class="form-row"><input type="text" name="name" placeholder="Your Name" required /></div>
-                <div class="form-row"><input type="email" name="email" placeholder="Email Address" required /></div>
-                <div class="form-row"><input type="text" name="company" placeholder="Company (Optional)" /></div>
+            <form class="contact-form" id="contactForm" action="send_email.php" method="POST">
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Your Name" required />
+                </div>
+                <div class="form-row">
+                    <input type="email" name="email" placeholder="Email Address" required />
+                </div>
+                <div class="form-row">
+                    <input type="text" name="company" placeholder="Company (Optional)" />
+                </div>
                 <div class="form-row">
                     <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
                 </div>
+
+                <!-- Google reCAPTCHA -->
+                <div class="form-row">
+                    <div class="g-recaptcha" data-sitekey="6LePyuAqAAAAAGlIX-pDoJ_jmNvS0S5s6o3M4Uj3"></div>
+                </div>
+
                 <button type="submit" class="btn">Send Message</button>
             </form>
 
             <p class="form-status" id="formStatus"></p>
         </div>
     </section>
+
+
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -213,6 +230,7 @@
         </div>
     </footer>
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script type="module" src="/src/main.js"></script>
 </body>
 

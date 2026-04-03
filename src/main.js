@@ -88,3 +88,44 @@ videoCards.forEach((card) => {
 
 // // Run on resize
 // window.addEventListener("resize", setHeroVideo);
+
+/* =========================
+   CONTACT FORM SUBMISSION
+========================= */
+const contactForm = document.getElementById("contactForm");
+if (contactForm) {
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(contactForm);
+    const statusDiv = document.getElementById("formStatus");
+
+    // Reset status
+    statusDiv.textContent = "";
+    statusDiv.style.color = "";
+
+    fetch(contactForm.action, {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.status === "success") {
+          statusDiv.textContent = data.message;
+          statusDiv.style.color = "green";
+          contactForm.reset();
+          grecaptcha.reset(); // reset reCAPTCHA
+        } else {
+          statusDiv.textContent = data.message;
+          statusDiv.style.color = "red";
+          grecaptcha.reset();
+        }
+      })
+      .catch((error) => {
+        statusDiv.textContent = "An error occurred. Please try again.";
+        statusDiv.style.color = "red";
+        grecaptcha.reset();
+        console.error(error);
+      });
+  });
+}
