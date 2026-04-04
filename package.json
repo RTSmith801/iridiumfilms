@@ -2,11 +2,7 @@
   "name": "iridiumfilms",
   "private": true,
   "version": "0.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
+  
   "devDependencies": {
     "sass": "^1.99.0"
   },

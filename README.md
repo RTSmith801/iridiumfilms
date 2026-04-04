@@ -11,5 +11,8 @@ Website produced by Pixel Tapestry, LLC
 
 ```
 <!-- To compile scss manually -->
-npx sass src/styles/styles.scss public/styles/styles.css
+sass styles/styles.scss styles/styles.css --watch
+
+<!-- To run local server -->
+python -m http.server 3000
 ```
