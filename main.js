@@ -39,12 +39,26 @@ const videoObserver = new IntersectionObserver(
       if (entry.isIntersecting) {
         card.classList.add("active");
 
-        // Try to play (required for autoplay policies)
-        video.play().catch(() => {
-          // Fails silently if browser blocks autoplay
-        });
+        if (!video.querySelector("source").src) {
+          video.remove(); // fallback to image only
+        }
+
+        // Wait until video can actually play
+        if (video.readyState >= 3) {
+          card.classList.add("video-ready");
+        } else {
+          video.addEventListener(
+            "canplay",
+            () => {
+              card.classList.add("video-ready");
+            },
+            { once: true },
+          );
+        }
+
+        video.play().catch(() => {});
       } else {
-        card.classList.remove("active");
+        card.classList.remove("active", "video-ready");
 
         video.pause();
         video.currentTime = 0;
