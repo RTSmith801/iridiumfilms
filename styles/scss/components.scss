@@ -1,15 +1,21 @@
 @use "variables" as *;
 
-.btn {
+.btn, button {
   background: $accent;
-  padding: 0.8rem 2rem;
   color: black;
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border: 1px solid $accent;
   text-decoration: none;
-  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
   margin-top: 1.5rem;
-  transition: 0.3s;
 
   &:hover {
+    color: white;
+    background: $accent;
     opacity: 0.8;
   }
 }
@@ -17,7 +23,7 @@
 .btn-outline {
   display: inline-block;
   padding: 0.8rem 2rem;
-  border: 1px solid white;
+  border: 1px solid $accent;
   color: white;
   text-decoration: none;
   font-size: 0.9rem;
@@ -27,8 +33,7 @@
   margin-top: 1.5rem;
 
   &:hover {
-    background: white;
-    color: black;
+    background: $accent;
     opacity: 0.8;
   }
 }
@@ -97,25 +102,25 @@
     resize: none;
   }
 
-  button {
-    align-self: center;
-    margin-top: 1rem;
-    display: inline-block;
-    padding: 0.75rem 1.75rem;
-    border: 1px solid white;
-    color: white;
-    background: rgba(0,0,0,0.0);
-    text-decoration: none;
-    font-size: 0.9rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
+  // button {
+  //   align-self: center;
+  //   margin-top: 1rem;
+  //   display: inline-block;
+  //   padding: 0.75rem 1.75rem;
+  //   border: 1px solid white;
+  //   color: white;
+  //   background: rgba(0,0,0,0.0);
+  //   text-decoration: none;
+  //   font-size: 0.9rem;
+  //   letter-spacing: 0.08em;
+  //   text-transform: uppercase;
+  //   transition: all 0.3s ease;
 
-  &:hover {
-    background: white;
-    color: black;
-  }
-  }
+  //   &:hover {
+  //     background: white;
+  //     color: black;
+  //   }
+  // }
 }
 
 .form-status {
